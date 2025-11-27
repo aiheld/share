@@ -1,0 +1,17 @@
+"Title:
+Infrastructure Anomaly Explanation Agent
+Problem Statement:
+IT infrastructure monitoring tools detect anomalies but often provide cryptic alerts without
+explanations. Understanding root causes is essential for timely remediation but requires expert
+knowledge. A generative AI agent can analyze alert data and infrastructure logs to generate natural
+language explanations and actionable recommendations, reducing mean time to resolution.
+Data Requirements:
+Simulated or anonymized infrastructure monitoring alerts, system logs, event correlation data, and
+remediation playbooks. Data must be representative of common infrastructure issues and
+structured for analysis.
+(Feel free to generate synthetic data as well from the provided access)
+Expected Output:
+An AI tool that outputs textual anomaly explanations and suggested remediation actions formatted
+in HTML or markdown. Include links to relevant documentation or runbooks. Deliverables contain
+source code, example alert datasets, and sample generated reports.
+Be creative to go beyond as you solve the above needs"			
