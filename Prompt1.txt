@@ -1,0 +1,97 @@
+You are an expert full-stack AI engineering assistant.
+Generate complete production-quality code for a multi-channel product description
+generation system. Include the following components:
+
+====================================================
+🔷 FRONTEND REQUIREMENTS (Next.js + TypeScript)
+====================================================
+Framework: Next.js 14 App Router + Tailwind + ShadCN UI
+Features:
+✔ Upload/Manage product catalogs (CSV/JSON entry)
+✔ UI to trigger AI content generation
+✔ View/Edit generated content by channel:
+    - E-commerce website long description
+    - Marketplace bullet points (Amazon/Flipkart)
+    - Social media captions (Instagram/Facebook)
+    - Mobile App short descriptions
+    - Email marketing message
+    - SEO meta title & description
+✔ Brand voice selector (Luxury, Casual, Minimalistic, Techy)
+✔ Keyword input for SEO optimization
+✔ Review platform compliance (validation UI)
+✔ Download/Export results (CSV, PDF, Copy)
+
+Include:
+- API request handling to FastAPI backend
+- Loading states, error handling, reusable components
+
+====================================================
+🔶 BACKEND REQUIREMENTS (FastAPI + Multi-Agent Python)
+====================================================
+Architecture: Multi-agent LLM pipeline with orchestration
+
+Agents:
+1️⃣ Product Understanding Agent  
+    → Extract key features from product specs, reviews, catalog
+2️⃣ Branding Agent  
+    → Rewrite tone to match selected brand personality
+3️⃣ SEO Agent  
+    → Ensure SEO keyword placement & ranking compliance
+4️⃣ Compliance Agent  
+    → Validate rules of Amazon/TikTok Shop/Flipkart etc.
+5️⃣ Multi-Channel Writer Agent  
+    → Produce different format outputs per platform
+
+API Endpoints:
+POST /generate_all_content
+POST /validate_compliance
+GET /product/{id}/generated_content
+
+Technical:
+- Python 3.11, FastAPI, Pydantic, Uvicorn
+- Async (aiohttp/httpx)
+- RAG integration to support product history & reviews
+- Dockerfile + requirements.txt
+
+====================================================
+📌 OUTPUT REQUIREMENTS
+====================================================
+The generated descriptions must comply with all lines of the project statement:
+
+✔ Compelling + SEO-optimized + unique
+✔ Scalable for large product catalogs
+✔ Multi-format content for multiple platforms
+✔ Consistent brand-voice + rapid update capability
+✔ Synthetic data fallback for new products
+✔ Compliant with marketplace policies
+
+Include:
+- Example test products + synthetic dataset generator
+- Metrics: uniqueness score, readability, SEO keyword density
+
+====================================================
+📦 PROJECT STRUCTURE
+====================================================
+Create full folder structure with comments:
+frontend/
+ └─ nextjs code…
+backend/
+ └─ fastapi multi-agent code…
+shared/
+ └─ prompt templates, SEO rules, compliance policies
+
+====================================================
+🧪 Testing + DevOps
+====================================================
+- Jest tests for frontend components
+- Pytest for backend agents
+- Docker compose file for unified local environment
+
+====================================================
+
+Generate:
+1️⃣ Full code with inline comments  
+2️⃣ README with setup + run instructions  
+3️⃣ Example product to test flow end-to-end  
+
+IMPORTANT: Make the code runnable on first try.
