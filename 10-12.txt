@@ -1,0 +1,17 @@
+Create a multi-agent system in Python that resolves SonarQube issues automatically:
+
+Agents:
+- ScannerAgent: Reads sonar-report.json
+- AnalysisAgent: Classifies issues by rule
+- FixAgent: Generates corrected code patches
+- ReviewAgent: Verifies logic integrity
+- AuditAgent: Logs all fixes
+
+Features:
+- JSON message protocol (sender, receiver, task, payload)
+- Orchestrator to manage communication
+- Patch generator that outputs unified diffs
+- Do not modify business logic
+- Follow Sonar rules exactly
+
+Now generate the full project structure and code.
