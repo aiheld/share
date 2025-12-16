@@ -58,15 +58,44 @@ The agent must auto-detect the stack.
 
 ---
 
+## ☕ JAVA VERSION MANAGEMENT (STRICT)
+
+### Mandatory Rule
+The agent **MUST switch Java versions using ONLY the following custom PowerShell profiles**:
+
+- Java 21 → `use-java21`
+- Java 17 → `use-java17`
+- Java 11 → `use-java11`
+
+### Enforcement
+- Determine the required Java version from:
+  - `pom.xml`
+  - `build.gradle`
+  - `gradle.properties`
+  - Toolchains configuration (if present)
+- BEFORE running any build or test command:
+  - Execute the correct PowerShell profile command
+- DO NOT:
+  - Use system Java directly
+  - Modify `JAVA_HOME` manually
+  - Download or install JDKs
+  - Change project configuration to force a version
+
+Incorrect Java version usage = HARD FAILURE.
+
+---
+
 ## 🔁 MANDATORY EXECUTION FLOW
 
 ### STEP 1: BASELINE CAPTURE (READ-ONLY)
 
+- Switch to the correct Java version using the PowerShell profile
 - Run full test suite with coverage enabled
 - Generate coverage reports
 - Create `BASELINE_COVERAGE_REPORT.md` containing:
   - Timestamp
   - Commit hash
+  - Java version used
   - Build tool and test framework
   - Coverage tool used
   - Overall coverage %
@@ -113,12 +142,14 @@ The agent must auto-detect the stack.
 
 ### STEP 5: FINAL VERIFICATION & REPORTING
 
+- Ensure correct Java version is still active
 - Run full test suite one final time
 - Generate final coverage reports
 - Create `FINAL_COVERAGE_REPORT.md` containing:
   - Final coverage %
   - Coverage delta vs baseline
   - Module-wise comparison table
+  - Java version used
   - List of test files added or modified
   - Explicit confirmation:
 
@@ -159,6 +190,7 @@ At completion, the agent must explicitly state:
 
 > **“Baseline and Final coverage reports created.  
 > Code coverage is ≥ 95%.  
+> Correct Java version selected using PowerShell profile.  
 > No production source code was modified.”**
 
 ---
