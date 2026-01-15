@@ -28,25 +28,34 @@ If tests cannot execute at all, perform **one-time fixes** to: `karma.conf.js`, 
 
 ## CRITICAL SUCCESS FACTORS
 
-### 1. ALWAYS Fix Failing Tests First
+### 1: Create Missing Tests (FIRST PRIORITY)
+
+-Each new test file MUST:
+- Compile and pass
+- Have ≥3 real tests:
+  - Creation
+  - Happy path
+  - Error/edge case
+
+### 2. ALWAYS Fix Failing Tests First
 - **Failing tests block accurate coverage measurement**
 - Never add new tests while failures exist
 - Common failures: duplicate spies, missing mocks, async timing, DOM access errors, undefined properties
 
-### 2. Work in Milestones
+### 3. Work in Milestones
 - Break 95% goal into incremental targets: `current → +5% → +10% → +20% → ... → 95%`
 - Calculate tests needed: `(targetCoverage% - currentCoverage%) × totalStatements ÷ avgStatementsPerTest`
 - Default estimate: ~50 statements covered per comprehensive test
 - Validate coverage increase after each milestone
 
-### 3. Prioritize High-Value Targets
+### 4. Prioritize High-Value Targets
 - **Large files** (>500 lines) with **low coverage** (<50%)
 - **Business-critical methods** (API calls, data processing, state management)
 - **Error handlers** (catch blocks, error callbacks, validation)
 - **Conditional logic** (if/else, switch, ternary operators)
 - Use `grep_search` to find uncovered public methods
 
-### 4. Handle Common Testing Challenges
+### 5. Handle Common Testing Challenges
 **Spy Management:**
 - Avoid duplicate `spyOn` - remove from global `beforeEach` if overriding in tests
 - Use `callThrough()` when spy needs to execute actual method
