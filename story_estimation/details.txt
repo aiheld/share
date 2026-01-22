@@ -25,3 +25,36 @@ Screen 3:
  
 Reporting and analytics
 Trend of stories, trend of data
+
+
+
+
+Team compsition and application maturity : 
+
+1.  need to add a option as team
+
+
+Engineering Capability maturity : Engineering Excellence
+Code Quality
+Security Posture
+Tech Debts
+Developer Platform reuse
+Regression Test coverage
+CI/CD maturity
+
+
+
+ 
+AI maturity
+1.Yet to start
+2.Tool as assistant
+3.Supervised Agent
+4.Autonomous Agent
+ 
+ 
+ Estimate : Current estimate 
+ 
+ (and basiline estimate , basiline effort and actual effor ) : calulated fields 
+ 
+ 1 st = 1 
+ 1st = 9 hr 
