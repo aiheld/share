@@ -1,0 +1,27 @@
+Screen 1
+-----------
+ 
+No of Junior Engineers:
+No of Senior Engineers:
+Offshore Leverage:
+% of AI Adoption:
+Regression test maturity:
+Automation maturity:
+CI/CD maturity:
+ 
+Screen 2:
+---------
+ 
+Story:
+Technology:
+Development Complexity:
+Test Complexity:
+ 
+Story Point: 5
+Effort: 5
+ 
+Screen 3:
+---------
+ 
+Reporting and analytics
+Trend of stories, trend of data
